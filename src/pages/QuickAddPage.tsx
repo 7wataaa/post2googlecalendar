@@ -20,16 +20,14 @@ export const insertEventToGoogleCalendar = async (calendarId: string, params: Qu
 
   const quickAddURL = `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events/quickAdd`;
 
-  const res = await axios
-    .post<calendar_v3.Schema$Event>(quickAddURL, params, {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${(await client.getTokens())?.accessToken}`,
-      },
-    })
-    .catch(() => {
-      return null;
-    });
+  console.log(params);
+
+  const res = await axios.post<calendar_v3.Schema$Event>(quickAddURL, params, {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${(await client.getTokens())?.accessToken}`,
+    },
+  });
 
   return res;
 };

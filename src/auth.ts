@@ -2,7 +2,7 @@ import { OAuth } from "@raycast/api";
 import fetch from "node-fetch";
 import { URLSearchParams } from "url";
 
-const clientId = "84357213220-6l4cqdqv24k80ha8sjqnhchhtu42ngvu.apps.googleusercontent.com";
+const clientId = "499799349076-cvl5fmvma8blf3fqldd3tf14vgmek2gi.apps.googleusercontent.com";
 
 const scopes = ["https://www.googleapis.com/auth/calendar.events"];
 
